@@ -1,0 +1,552 @@
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+label,
+footer {
+  color: #323232;
+  font-weight: bold;
+}
+
+a {
+  color: #323232;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2 {
+  font-size: 3.9rem;
+}
+
+h3, p {
+  font-size: 1.6rem;
+}
+
+nav {
+  font-size: 1.8rem;
+}
+
+.mainHeading h3 {
+  color: #767676;
+}
+
+.about h3 {
+  font-size: 3.1rem;
+}
+
+.projects h3,
+.education h3 .experience h3 {
+  font-size: 2rem;
+}
+
+.fullTime {
+  font-size: 1.2rem;
+}
+
+h4,
+p {
+  color: #767676;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+input, textarea, label {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+section {
+  padding-bottom: 8%;
+}
+
+.container,
+ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+/* Dropdown Menu for Mobile */
+header {
+  padding-top: 5%;
+}
+header h1 {
+  margin-bottom: 0;
+  padding-top: 5%;
+}
+header nav {
+  float: right;
+  width: min(35%, 35rem);
+  position: relative;
+}
+header nav a:hover::after {
+  content: "";
+  width: 21%;
+  height: 0.25rem;
+  background: #323232;
+  position: absolute;
+  bottom: 20%;
+}
+header .mainHeading {
+  padding-bottom: 5%;
+}
+header .personalInfo {
+  padding-bottom: 0;
+}
+header .socialMedia ul {
+  width: max(12%, 10rem);
+}
+header .socialMedia ul a {
+  width: max(3%, 3rem);
+}
+header .socialMedia ul a:hover, header .socialMedia ul a:focus {
+  outline: 2px solid #323232;
+  border-radius: 2.5%;
+}
+header .socialMedia ul img {
+  width: max(3%, 30px);
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.coreCompetencies li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: max(10%, 10rem);
+}
+.coreCompetencies img {
+  display: flex;
+  width: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: max(30%, 20rem);
+}
+
+.projects .container {
+  margin-bottom: 1%;
+}
+.projects p {
+  margin-bottom: 7.5%;
+}
+
+.portfolioLink {
+  display: flex;
+  position: relative;
+  width: 17%;
+}
+.portfolioLink a:hover::after {
+  content: "";
+  width: 95%;
+  height: 0.25rem;
+  background: #323232;
+  position: absolute;
+  bottom: 20%;
+}
+
+.codeLinks {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.codeLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+}
+.codeLinks a:hover, .codeLinks a:focus {
+  outline: 2px solid #323232;
+  border-radius: 2.5%;
+}
+.codeLinks img {
+  margin-right: 2%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.workExperienceContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.workExperienceContainer .card {
+  margin-right: 10%;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+.contact form label,
+.contact form input,
+.contact form textarea {
+  margin-bottom: 1%;
+}
+.contact form input {
+  width: min(50%, 25rem);
+}
+.contact form textarea {
+  width: min(70%, 45rem);
+  resize: none;
+}
+.contact form button {
+  width: min(20%, 8rem);
+}
+.contact form button:hover,
+.contact form button:focus {
+  background-color: #323232;
+  color: white;
+  cursor: pointer;
+}
+
+.returnToTop {
+  display: flex;
+  justify-content: center;
+}
+.returnToTop a {
+  padding: 1%;
+  border: 2px solid #323232;
+}
+.returnToTop a:hover,
+.returnToTop a:focus {
+  background-color: #323232;
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.homeAnchor:hover::after {
+  content: "";
+  width: 15%;
+  height: 0.25rem;
+  background: #323232;
+  position: absolute;
+  bottom: 20%;
+}
+
+.portfolioHeading {
+  padding-bottom: 10%;
+}
+
+.portfolioProjects .card {
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    padding-bottom: 10%;
+  }
+}
+
+/*# sourceMappingURL=/styles.c86c3119.css.map */
