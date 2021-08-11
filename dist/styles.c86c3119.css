@@ -394,7 +394,8 @@ header .socialMedia ul {
 header .socialMedia ul a {
   width: max(3%, 3rem);
 }
-header .socialMedia ul a:hover, header .socialMedia ul a:focus {
+header .socialMedia ul a:hover,
+header .socialMedia ul a:focus {
   outline: 2px solid #323232;
   border-radius: 2.5%;
 }
@@ -444,7 +445,8 @@ header .socialMedia ul img {
   justify-content: center;
   width: 35%;
 }
-.codeLinks a:hover, .codeLinks a:focus {
+.codeLinks a:hover,
+.codeLinks a:focus {
   outline: 2px solid #323232;
   border-radius: 2.5%;
 }
@@ -507,6 +509,49 @@ header .socialMedia ul img {
   cursor: pointer;
 }
 
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #323232;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modalContent {
+  background-color: #fefefe;
+  position: relative;
+  color: #323232;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: max(33%, 25rem);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .returnToTop {
   display: flex;
   justify-content: center;
@@ -524,6 +569,7 @@ header .socialMedia ul img {
 footer {
   display: flex;
   justify-content: center;
+  padding-bottom: 2%;
 }
 
 .homeAnchor:hover::after {

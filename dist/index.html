@@ -260,39 +260,29 @@
 					</div>
 				</section>
 
-				<section class="testimonials wrapper" id="testimonials">
-					<h2>Testimonials</h2>
-					<div class="container">
-						<div class="card">
-							<h3>testimonial1</h3>
-							<h4>position</h4>
-							<p>description</p>
-						</div>
-						<div class="card">
-							<h3>testimonial2</h3>
-							<h4>position</h4>
-							<p>description</p>
-						</div>
-						<div class="card">
-							<h3>testimonial1</h3>
-							<h4>position</h4>
-							<p>description</p>
-						</div>
-					</div>
-				</section>
-
 				<section class="contact wrapper" id="contact">
 					<h2>Contact me</h2>
-					<form class="contactForm" form="" method="POST" netlify="">
-						<label for="name" id="name">Name</label>
-						<input type="text" name="name" placeholder="Name" autocomplete="off" required="">
-						<label for="email" id="email">Email</label>
-						<input type="text" name="email" placeholder="Email" autocomplete="off" required="">
-						<label for="message" id="message">Message</label>
+					<form method="POST" netlify="">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" placeholder="Name" autocomplete="off" required="">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" placeholder="Email" autocomplete="off" required="">
+						<label for="message">Message</label>
 						<textarea name="message" id="message" cols="50" rows="10" placeholder="Get in touch!" required=""></textarea>
-						<button type="submit">Send!</button>
+						<button id="submit" type="submit">Send!</button>
 					</form>
 				</section>
+				<!-- The Modal -->
+				<div id="messageConfirmation" class="modal">
+					<!-- Modal content -->
+					<div class="modalContent">
+						<span class="close">&times;</span>
+						<p>
+							Thanks for reaching out! I'll get back to you very
+							soon.
+						</p>
+					</div>
+				</div>
 				<section class="returnToTop">
 					<a href="/">Return to top</a>
 				</section>
