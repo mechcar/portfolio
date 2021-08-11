@@ -433,20 +433,6 @@ header .socialMedia ul img {
   margin-bottom: 7.5%;
 }
 
-.portfolioLink {
-  display: flex;
-  position: relative;
-  width: 17%;
-}
-.portfolioLink a:hover::after {
-  content: "";
-  width: 95%;
-  height: 0.25rem;
-  background: #323232;
-  position: absolute;
-  bottom: 20%;
-}
-
 .codeLinks {
   display: flex;
   justify-content: space-around;
@@ -466,6 +452,20 @@ header .socialMedia ul img {
   margin-right: 2%;
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.portfolioLink {
+  display: flex;
+  position: relative;
+  width: 17%;
+}
+.portfolioLink a:hover::after {
+  content: "";
+  width: 95%;
+  height: 0.25rem;
+  background: #323232;
+  position: absolute;
+  bottom: 20%;
 }
 
 .workExperienceContainer {
