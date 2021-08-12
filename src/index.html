@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Josh Carson</title>
+		<link rel="stylesheet" href="styles/styles.scss" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="wrapper">
+					<nav>
+						<div class="navContainer">
+							<ul>
+								<a href="https://josh-carson.com/portfolio">
+									<li>Portfolio</li>
+								</a>
+								<a href="">
+									<li>Resume</li>
+								</a>
+								<a href="https://josh-carson.com/contact">
+									<li>Contact</li>
+								</a>
+							</ul>
+
+							<div class="dropdown">
+								<label
+									for="dropButton"
+									id="dropButton"
+									name="dropButton"
+								></label>
+								<button class="dropButton">Menu</button>
+
+								<div class="dropdownContent">
+									<a href="https://josh-carson.com/portfolio"
+										>Portfolio</a
+									>
+									<a href="#">Resume</a>
+									<a href="https://josh-carson.com/contact"
+										>Contact</a
+									>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+
+				<div class="mainHeading wrapper">
+					<h1>Hi. I'm Josh Carson</h1>
+					<h3>Front End Developer.</h3>
+				</div>
+
+				<section class="personalInfo wrapper" id="personalInfo">
+					<ul>
+						<li>
+							<h3>Location</h3>
+							<p>Toronto, Canada</p>
+						</li>
+
+						<li>
+							<h3>Email</h3>
+							<p>joshetcarson@gmail.com</p>
+						</li>
+
+						<li>
+							<h3>Phone</h3>
+							<p>416-525-4866</p>
+						</li>
+					</ul>
+				</section>
+
+				<section class="socialMedia wrapper" id="socialMedia">
+					<ul>
+						<a
+							href="https://www.linkedin.com/in/josh-carson-197338a4/"
+						>
+							<li>
+								<img
+									src="./assets/linkedIn.png"
+									alt="LinkedIn Logo in black & white"
+								/>
+							</li>
+						</a>
+						<a href="https://github.com/mechcar">
+							<li>
+								<img
+									src="./assets/GitHub.png"
+									alt="GitHub Logo in black & white"
+								/>
+							</li>
+						</a>
+					</ul>
+				</section>
+			</header>
+			<main>
+				<section class="about wrapper" id="about">
+					<div class="headshot">
+						<img
+							src="./assets/headshot.jpg"
+							alt="Josh Carson headshot"
+						/>
+					</div>
+					<div class="bio">
+						<h2>About me</h2>
+						<h3>Some info here...</h3>
+						<p>Bio</p>
+					</div>
+				</section>
+
+				<section class="coreCompetencies wrapper" id="coreCompetencies">
+					<h2>Core Competencies</h2>
+					<ul>
+						<li>
+							<img
+								src="./assets/HTML.jpg"
+								alt="HTML Logo in black & white"
+							/>
+							<h3>HTML</h3>
+						</li>
+
+						<li>
+							<img
+								src="./assets/CSS.png"
+								alt="CSS Logo in black & white"
+							/>
+							<h3>CSS</h3>
+						</li>
+
+						<li>
+							<img
+								src="./assets/JS.png"
+								alt="JavaScript Logo in black & white"
+							/>
+							<h3>JavaScript</h3>
+						</li>
+
+						<li>
+							<img
+								class="link"
+								src="./assets/React.png"
+								alt="React Logo in black & white"
+							/>
+							<h3>React</h3>
+						</li>
+
+						<li>
+							<img
+								class="gitHub"
+								src="./assets/GitHub.png"
+								alt="GitHub Logo in black & white"
+							/>
+							<h3>GitHub</h3>
+						</li>
+					</ul>
+				</section>
+
+				<section class="projects wrapper" id="projects">
+					<h2>Projects</h2>
+					<div class="container">
+						<div class="card">
+							<div class="stockOMeter">
+								<h3>StockOMeter</h3>
+							</div>
+							<h4>JavaScript, SCSS, RESTful API</h4>
+							<p>
+								An app to keep track of your investments and
+								search for stock information and ticker charts.
+							</p>
+							<div class="codeLinks">
+								<a
+									href="https://laughing-mirzakhani-1c0fa8.netlify.app/"
+								>
+									<img
+										src="./assets/Link.png"
+										alt="Cartoon chain link"
+									/>
+									<p>View Live</p></a
+								>
+								<a
+									href="https://github.com/mechcar/StockOMeter"
+								>
+									<img
+										src="./assets/GitHub.png"
+										alt="GitHub Logo in black & white"
+									/>
+									<p>View Repo</p></a
+								>
+							</div>
+						</div>
+						<div class="card">
+							<div class="quickFlickPix">
+								<h3>QuickFlickPix</h3>
+							</div>
+							<h4>React, SCSS, Firebase, RESTful API</h4>
+							<p>
+								Users can search for and add movies to curated
+								lists, and receive recommendations based on
+								desired genre and time available for viewing.
+							</p>
+							<div class="codeLinks">
+								<a href="https://quickflickpix.netlify.app/">
+									<img
+										src="./assets/Link.png"
+										alt="Cartoon chain link"
+									/>
+									<p>View Live</p></a
+								>
+								<a
+									href="https://github.com/cohort35-project4-group5/quick-flick-picker"
+									><img
+										src="./assets/GitHub.png"
+										alt="GitHub Logo in black & white"
+									/>
+									<p>View Repo</p>
+								</a>
+							</div>
+						</div>
+						<div class="card">
+							<div class="rainOrShine">
+								<h3>Rain or Shine?</h3>
+							</div>
+							<h4>React, CSS, RESTful API</h4>
+							<p>
+								Weather app with simple UI that can return the
+								forecast based on city name, postal code or zip
+								code.
+							</p>
+							<div class="codeLinks">
+								<a href="https://rainorshineapp.netlify.app/">
+									<img
+										src="./assets/Link.png"
+										alt="Cartoon chain link"
+									/>
+									<p>View Live</p>
+								</a>
+								<a
+									href="https://github.com/mechcar/rainOrShine"
+								>
+									<img
+										src="./assets/GitHub.png"
+										alt="GitHub Logo in black & white"
+									/>
+									<p>View Repo</p></a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="portfolioLink">
+						<a href="https://josh-carson.com/portfolio"
+							><h3>View Full Portfolio</h3></a
+						>
+					</div>
+				</section>
+
+				<section class="education wrapper" id="education">
+					<h2>Education</h2>
+					<div class="container">
+						<div class="card">
+							<h3>Juno College</h3>
+							<ul>
+								<li>
+									<h4>June 2021 - August 2021</h4>
+									<p>Web Development Immersive Bootcamp</p>
+								</li>
+
+								<li>
+									<h4>May 2021</h4>
+									<p>Accelerated JavaScript Course</p>
+								</li>
+
+								<li>
+									<h4>May 2021</h4>
+									<p>Accelerated Web Development Course</p>
+								</li>
+							</ul>
+						</div>
+						<div class="card">
+							<h3>Ryerson University</h3>
+							<h4>September 2018 - September 2020</h4>
+							<p>
+								Completed 20 credits towards a BEng. in
+								Mechanical Engineering
+							</p>
+						</div>
+						<div class="card">
+							<h3>Western University</h3>
+							<h4>September 2011 - December 2016</h4>
+							<p>
+								Bachelor of Arts - Honours Specialization in
+								Kinesiology
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="workExperience wrapper" id="workExperience">
+					<h2>Work Experience</h2>
+					<div class="workExperienceContainer">
+						<div class="card">
+							<p class="fullTime">Full Time</p>
+							<h3>True North Underpinning</h3>
+							<h4>Assistant Foreman</h4>
+							<h4>
+								May - September 2014 & 2015, March - August 2018
+							</h4>
+							<ul>
+								<li>
+									<p>
+										Assisted site foreman in ensuring that
+										projects were completed on schedule
+										while adhering to safety standards
+									</p>
+								</li>
+								<li>
+									<p>
+										Responded to homeowner inquiries and
+										concerns, resulting in an improved
+										client experience
+									</p>
+								</li>
+							</ul>
+						</div>
+						<div class="card">
+							<p class="fullTime">Full Time</p>
+							<h3>AccuServ Heating & Air Conditioning</h3>
+							<h4>Licensed Gas Technician</h4>
+							<h4>May 2016 - 2017</h4>
+							<ul>
+								<li>
+									<p>
+										Collaborated with experienced gas and
+										refrigeration technicians to repair and
+										install high quality HVAC systems and
+										equipment in the GTA
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="returnToTop">
+					<a href="/">Return to top</a>
+				</section>
+			</main>
+			<footer class="wrapper">Josh Carson 2021</footer>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

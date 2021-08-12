@@ -1,0 +1,483 @@
+@import "setup";
+@import "variables";
+@import "typography";
+
+body {
+	background-color: rgb(245, 245, 245);
+}
+
+.wrapper {
+	max-width: 1280px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+section {
+	padding-bottom: 8%;
+}
+
+.container,
+ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+button:hover {
+	cursor: pointer;
+}
+
+/* Dropdown Menu for Mobile */
+
+.dropdown {
+	position: absolute;
+	right: 0;
+	top: 2rem;
+}
+
+.dropButton {
+	position: relative;
+	width: 9rem;
+	height: 5rem;
+	border-top: 3px solid $primaryFontColor;
+	border-bottom: 3px solid $primaryFontColor;
+	border-left: 0;
+	border-right: 0;
+	text-transform: bold;
+}
+
+.dropdownContent {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	padding-top: 1%;
+	line-height: 3rem;
+}
+
+.dropdownContent a {
+	text-decoration: none;
+	display: block;
+	padding-left: 5%;
+	width: 9rem;
+}
+
+.dropdownContent a:hover,
+.dropdownContent a:focus {
+	background-color: $primaryFontColor;
+	color: white;
+}
+
+.dropdown:hover .dropdownContent,
+.dropdown:focus .dropdownContent{
+	display: block;
+}
+
+.dropdown:hover .dropButton,
+.dropdown:focus .dropButton{
+	background-color: $primaryFontColor;
+	color: white;
+}
+
+/* Dropdown Menu Resp. */
+
+@media screen and (min-width: 551px) {
+	.dropdown {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.dropdown {
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.navContainer ul {
+		display: none;
+	}
+}
+
+header {
+	padding-top: 5%;
+
+	h1 {
+		margin-bottom: 0;
+		padding-top: 5%;
+	}
+
+	nav {
+		float: right;
+		width: max(35%, 35rem);
+		position: relative;
+
+		ul a:hover::after {
+			content: "";
+			width: 23%;
+			height: 0.25rem;
+			background: $primaryFontColor;
+			position: absolute;
+			bottom: 20%;
+		}
+	}
+
+	.mainHeading {
+		padding-bottom: 5%;
+	}
+
+	.personalInfo {
+		padding-bottom: 0;
+
+		ul {
+			width: 55%;
+		}
+	}
+
+	.socialMedia ul {
+		width: max(12%, 10rem);
+
+		a {
+			width: max(3%, 3rem);
+		}
+
+		a:hover,
+		a:focus {
+			outline: 2px solid $primaryFontColor;
+			border-radius: 2.5%;
+		}
+
+		img {
+			width: max(3%, 30px);
+		}
+	}
+}
+.about {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.coreCompetencies {
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: max(10%, 10rem);
+	}
+
+	img {
+		display: flex;
+		width: 30px;
+	}
+
+	img:hover {
+		animation: spin 2s infinite;
+		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	width: max(30%, 20rem);
+}
+
+.projects,
+.portfolioProjects {
+	.container {
+		margin-bottom: 1%;
+	}
+
+	p {
+		margin-bottom: 7.5%;
+	}
+
+	.stockOMeter,
+	.quickFlickPix,
+	.rainOrShine {
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	.stockOMeter:hover::before {
+		background-color: black;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../assets/dollar.jpg);
+		filter: opacity(0.5);
+		animation: moneyDrop 2s ease infinite;
+	}
+
+	@keyframes moneyDrop {
+		0% {
+			background-position: 20% 100%;
+		}
+
+		100% {
+			background-position: 0 0;
+		}
+	}
+
+	.quickFlickPix:hover::before {
+		content: "";
+		position: absolute;
+		width: 329%;
+		height: 100%;
+		background-image: url(../assets/filmStrip.png);
+		filter: opacity(0.3);
+		animation: filmRoll 4s linear infinite;
+	}
+
+	@keyframes filmRoll {
+		0% {
+			transform: translateX(-100%);
+		}
+
+		100% {
+			transform: translateX(100%);
+		}
+	}
+
+	.rainOrShine:hover::before {
+		background-color: black;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../assets/rain.png);
+		filter: opacity(0.6);
+		animation: rainAnimation 0.45s linear infinite;
+	}
+
+	@keyframes rainAnimation {
+		0% {
+			background-position: 20% 100%;
+		}
+
+		100% {
+			background-position: 0 0;
+		}
+	}
+}
+
+.codeLinks {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 37.5%;
+	}
+
+	a:hover,
+	a:focus {
+		outline: 2px solid $primaryFontColor;
+		border-radius: 2.5%;
+	}
+
+	img {
+		margin-right: 2%;
+		padding: 2%;
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+
+	img:hover {
+		animation: spin 2s infinite;
+		animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	}
+}
+
+.portfolioLink {
+	display: flex;
+	position: relative;
+	width: 18%;
+
+	a:hover::after {
+		content: "";
+		width: 95%;
+		height: 0.25rem;
+		background: $primaryFontColor;
+		position: absolute;
+		bottom: 20%;
+	}
+}
+
+.workExperienceContainer {
+	display: flex;
+	flex-wrap: wrap;
+
+	.card {
+		margin-right: 10%;
+	}
+}
+
+.contact {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	form {
+		display: flex;
+		flex-direction: column;
+
+		label,
+		input,
+		textarea {
+			margin-bottom: 1%;
+		}
+
+		input {
+			width: min(50%, 25rem);
+		}
+
+		textarea {
+			width: min(70%, 45rem);
+			resize: none;
+		}
+
+		button {
+			width: min(20%, 8rem);
+		}
+
+		button:hover,
+		button:focus {
+			background-color: $primaryFontColor;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: $primaryFontColor;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modalContent {
+	background-color: #fefefe;
+	position: relative;
+	color: $primaryFontColor;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: max(33%, 25rem);
+}
+
+/* The Close Button */
+.close {
+	color: #aaaaaa;
+	position: absolute;
+	right: 2%;
+	top: 2%;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.returnToTop {
+	display: flex;
+	justify-content: center;
+
+	a {
+		padding: 1%;
+		border: 2px solid $primaryFontColor;
+	}
+
+	a:hover,
+	a:focus {
+		background-color: $primaryFontColor;
+		color: white;
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 2%;
+}
+
+.homeAnchor:hover::after {
+	content: "";
+	width: 15%;
+	height: 0.25rem;
+	background: $primaryFontColor;
+	position: absolute;
+	bottom: 20%;
+}
+
+.portfolioHeading {
+	padding-bottom: 10%;
+}
+
+.portfolioProjects {
+	.card {
+		margin-bottom: 5%;
+	}
+}
+
+@media screen and(max-width: 450px) {
+	.card {
+		padding-bottom: 10%;
+	}
+}
+
+.contactHeading {
+	padding-bottom: 5%;
+	padding-top: 0;
+}
