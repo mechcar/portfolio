@@ -291,11 +291,11 @@ h2 {
 }
 
 h3, p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 nav {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .mainHeading h3 {
@@ -312,7 +312,7 @@ nav {
 }
 
 .fullTime {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 h4,
@@ -322,7 +322,7 @@ p {
 
 h4 {
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 input, textarea, label {
