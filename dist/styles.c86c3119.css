@@ -290,7 +290,7 @@ h2 {
   font-size: 3.9rem;
 }
 
-h3, p {
+h3, p, .dropdown-content {
   font-size: 1.8rem;
 }
 
@@ -366,6 +366,71 @@ button:hover {
 }
 
 /* Dropdown Menu for Mobile */
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 2rem;
+}
+
+.dropButton {
+  position: relative;
+  width: 9rem;
+  height: 5rem;
+  border-top: 3px solid #323232;
+  border-bottom: 3px solid #323232;
+  border-left: 0;
+  border-right: 0;
+  text-transform: bold;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 1%;
+  line-height: 3rem;
+}
+
+.dropdownContent a {
+  text-decoration: none;
+  display: block;
+  padding-left: 5%;
+  width: 9rem;
+}
+
+.dropdownContent a:hover,
+.dropdownContent a:focus {
+  background-color: #323232;
+  color: white;
+}
+
+.dropdown:hover .dropdownContent,
+.dropdown:focus .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropButton,
+.dropdown:focus .dropButton {
+  background-color: #323232;
+  color: white;
+}
+
+/* Dropdown Menu Resp. */
+@media screen and (min-width: 551px) {
+  .dropdown {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .dropdown {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .navContainer ul {
+    display: none;
+  }
+}
 header {
   padding-top: 5%;
 }
@@ -375,12 +440,12 @@ header h1 {
 }
 header nav {
   float: right;
-  width: min(35%, 35rem);
+  width: max(35%, 35rem);
   position: relative;
 }
-header nav a:hover::after {
+header nav ul a:hover::after {
   content: "";
-  width: 21%;
+  width: 23%;
   height: 0.25rem;
   background: #323232;
   position: absolute;
@@ -446,21 +511,25 @@ header .socialMedia ul img {
   width: max(30%, 20rem);
 }
 
-.projects .container, .portfolioProjects .container {
+.projects .container,
+.portfolioProjects .container {
   margin-bottom: 1%;
 }
-.projects p, .portfolioProjects p {
+.projects p,
+.portfolioProjects p {
   margin-bottom: 7.5%;
 }
 .projects .stockOMeter,
 .projects .quickFlickPix,
-.projects .rainOrShine, .portfolioProjects .stockOMeter,
+.projects .rainOrShine,
+.portfolioProjects .stockOMeter,
 .portfolioProjects .quickFlickPix,
 .portfolioProjects .rainOrShine {
   position: relative;
   overflow-x: hidden;
 }
-.projects .stockOMeter:hover::before, .portfolioProjects .stockOMeter:hover::before {
+.projects .stockOMeter:hover::before,
+.portfolioProjects .stockOMeter:hover::before {
   background-color: black;
   content: "";
   position: absolute;
@@ -480,7 +549,8 @@ header .socialMedia ul img {
     background-position: 0 0;
   }
 }
-.projects .quickFlickPix:hover::before, .portfolioProjects .quickFlickPix:hover::before {
+.projects .quickFlickPix:hover::before,
+.portfolioProjects .quickFlickPix:hover::before {
   content: "";
   position: absolute;
   width: 329%;
@@ -497,7 +567,8 @@ header .socialMedia ul img {
     transform: translateX(100%);
   }
 }
-.projects .rainOrShine:hover::before, .portfolioProjects .rainOrShine:hover::before {
+.projects .rainOrShine:hover::before,
+.portfolioProjects .rainOrShine:hover::before {
   background-color: black;
   content: "";
   position: absolute;
