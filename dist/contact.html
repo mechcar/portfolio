@@ -14,19 +14,32 @@
 	<body>
 		<div class="wrapper">
 			<header class="wrapper">
-                <div class="wrapper">
-					<nav id="nav">
-						<ul>
-                            <a href="/" class="homeAnchor">
-                                <li>Home</li>
-                            </a>
-							<a href="https://josh-carson.com/portfolio">
-								<li>Portfolio</li>
-							</a>
-							<a href="">
-								<li>Resume</li>
-							</a>
-						</ul>
+				<div class="wrapper">
+					<nav>
+						<div class="navContainer">
+							<ul>
+								<a href="/" class="homeAnchor">
+									<li>Home</li>
+								</a>
+								<a href="https://josh-carson.com/portfolio">
+									<li>Portfolio</li>
+								</a>
+								<a href="/assets\josh-carson-midpoint.pdf">
+									<li>Resume</li>
+								</a>
+							</ul>
+
+							<div class="dropdown">
+								<label for="dropButton" id="dropButton" name="dropButton"></label>
+								<button class="dropButton">Menu</button>
+
+								<div class="dropdownContent">
+									<a href="/">Home</a>
+									<a href="https://josh-carson.com/portfolio">Portfolio</a>
+									<a href="#">Resume</a>
+								</div>
+							</div>
+						</div>
 					</nav>
 				</div>
 
@@ -56,7 +69,9 @@
 					</div>
 				</div>
 			</main>
-			<footer class="wrapper">Josh Carson 2021</footer>
+			<footer class="wrapper">
+				Josh Carson 2021
+			</footer>
 		</div>
 		<script src="/app.c328ef1a.js"></script>
 	</body>

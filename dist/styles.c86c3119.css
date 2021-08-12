@@ -282,16 +282,26 @@ a {
   color: #323232;
 }
 
-h1 {
-  font-size: 10rem;
+.mainHeading h1 {
+  font-size: clamp(2.4rem, -1.3116rem + 8.8372vw, 10rem);
+}
+
+.portfolioHeading,
+.contactHeading {
+  font-size: clamp(3rem, 0.85714rem + 7.1428vw, 10rem);
 }
 
 h2 {
   font-size: 3.9rem;
 }
 
-h3, p, .dropdown-content {
+h3,
+p {
   font-size: 1.8rem;
+}
+
+.dropdownContent a {
+  font-size: clamp(1.3rem, 1.05rem + 0.83333vw, 1.8rem);
 }
 
 nav {
@@ -306,8 +316,7 @@ nav {
   font-size: 3.1rem;
 }
 
-.projects h3,
-.education h3 .experience h3 {
+.projects h3 {
   font-size: 2rem;
 }
 
@@ -325,8 +334,11 @@ h4 {
   font-size: 1.6rem;
 }
 
-input, textarea, label {
-  font-size: 1.6rem;
+input,
+textarea,
+label,
+button {
+  font-size: clamp(1.4rem, -0.43673rem + 6.12244vw,2rem);
   color: black;
 }
 
@@ -365,6 +377,15 @@ button:hover {
   cursor: pointer;
 }
 
+.homeAnchor:hover::after {
+  content: "";
+  width: 15%;
+  height: 0.25rem;
+  background: #323232;
+  position: absolute;
+  bottom: 20%;
+}
+
 /* Dropdown Menu for Mobile */
 .dropdown {
   position: absolute;
@@ -374,13 +395,12 @@ button:hover {
 
 .dropButton {
   position: relative;
-  width: 9rem;
-  height: 5rem;
+  height: 3.3rem;
   border-top: 3px solid #323232;
   border-bottom: 3px solid #323232;
   border-left: 0;
   border-right: 0;
-  text-transform: bold;
+  font-weight: bold;
 }
 
 .dropdownContent {
@@ -393,9 +413,15 @@ button:hover {
 
 .dropdownContent a {
   text-decoration: none;
+  border: 1px solid #323232;
   display: block;
-  padding-left: 5%;
-  width: 9rem;
+  text-align: center;
+}
+
+.dropButton,
+.dropdownContent,
+.dropdownContent a {
+  width: clamp(6rem, 3rem + 10vw, 12rem);
 }
 
 .dropdownContent a:hover,
@@ -415,20 +441,40 @@ button:hover {
   color: white;
 }
 
-/* Dropdown Menu Resp. */
-@media screen and (min-width: 551px) {
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+footer img {
+  width: 20%;
+  box-shadow: 0 10px 50px 5px black;
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 901px) {
   .dropdown {
     display: none;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
   .dropdown {
     display: inline-block;
   }
-}
-@media only screen and (max-width: 550px) {
+
   .navContainer ul {
     display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav {
+    margin-top: 2%;
+  }
+
+  .card {
+    padding-bottom: 10%;
   }
 }
 header {
@@ -436,7 +482,6 @@ header {
 }
 header h1 {
   margin-bottom: 0;
-  padding-top: 5%;
 }
 header nav {
   float: right;
@@ -445,7 +490,7 @@ header nav {
 }
 header nav ul a:hover::after {
   content: "";
-  width: 23%;
+  width: 20%;
   height: 0.25rem;
   background: #323232;
   position: absolute;
@@ -627,7 +672,7 @@ header .socialMedia ul img {
 .portfolioLink {
   display: flex;
   position: relative;
-  width: 18%;
+  width: max(19%, 20rem);
 }
 .portfolioLink a:hover::after {
   content: "";
@@ -638,12 +683,56 @@ header .socialMedia ul img {
   bottom: 20%;
 }
 
-.workExperienceContainer {
+.returnToTop {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
-.workExperienceContainer .card {
-  margin-right: 10%;
+.returnToTop a {
+  padding: 1%;
+  border: 2px solid #323232;
+}
+.returnToTop a:hover,
+.returnToTop a:focus {
+  background-color: #323232;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .mainHeading {
+    padding-top: 7.5%;
+  }
+}
+.portfolioHeading {
+  padding-bottom: 10%;
+}
+
+.portfolioProjects .card {
+  margin-bottom: 5%;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .portfolioProjects .container {
+    margin-top: 5%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .portfolioProjects .container h4 {
+    margin: 2.5% 0;
+  }
+  .portfolioProjects .card {
+    width: 80%;
+    padding-bottom: 12.5%;
+  }
+}
+.contactHeading {
+  padding-bottom: 5%;
+  padding-top: 0;
 }
 
 .contact {
@@ -658,17 +747,18 @@ header .socialMedia ul img {
 .contact form label,
 .contact form input,
 .contact form textarea {
-  margin-bottom: 1%;
+  margin-bottom: 1rem;
 }
 .contact form input {
   width: min(50%, 25rem);
 }
 .contact form textarea {
-  width: min(70%, 45rem);
+  width: min(90%, 60rem);
   resize: none;
 }
 .contact form button {
   width: min(20%, 8rem);
+  padding: 1%;
 }
 .contact form button:hover,
 .contact form button:focus {
@@ -720,51 +810,12 @@ header .socialMedia ul img {
   cursor: pointer;
 }
 
-.returnToTop {
+.workExperienceContainer {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
-.returnToTop a {
-  padding: 1%;
-  border: 2px solid #323232;
-}
-.returnToTop a:hover,
-.returnToTop a:focus {
-  background-color: #323232;
-  color: white;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2%;
-}
-
-.homeAnchor:hover::after {
-  content: "";
-  width: 15%;
-  height: 0.25rem;
-  background: #323232;
-  position: absolute;
-  bottom: 20%;
-}
-
-.portfolioHeading {
-  padding-bottom: 10%;
-}
-
-.portfolioProjects .card {
-  margin-bottom: 5%;
-}
-
-@media screen and (max-width: 450px) {
-  .card {
-    padding-bottom: 10%;
-  }
-}
-.contactHeading {
-  padding-bottom: 5%;
-  padding-top: 0;
+.workExperienceContainer .card {
+  margin-right: 10%;
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */
