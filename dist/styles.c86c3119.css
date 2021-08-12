@@ -388,6 +388,9 @@ header .mainHeading {
 header .personalInfo {
   padding-bottom: 0;
 }
+header .personalInfo ul {
+  width: 55%;
+}
 header .socialMedia ul {
   width: max(12%, 10rem);
 }
@@ -420,6 +423,18 @@ header .socialMedia ul img {
   display: flex;
   width: 30px;
 }
+.coreCompetencies img:hover {
+  animation: spin 2s infinite;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .card {
   display: flex;
@@ -433,6 +448,69 @@ header .socialMedia ul img {
 .projects p {
   margin-bottom: 7.5%;
 }
+.projects .stockOMeter,
+.projects .quickFlickPix,
+.projects .rainOrShine {
+  position: relative;
+  overflow-x: hidden;
+}
+.projects .stockOMeter:hover::before {
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/dollar.cc213fa2.jpg);
+  filter: opacity(0.5);
+  animation: moneyDrop 2s ease infinite;
+}
+@keyframes moneyDrop {
+  0% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.projects .quickFlickPix:hover::before {
+  content: "";
+  position: absolute;
+  width: 329%;
+  height: 100%;
+  background-image: url(/filmStrip.1e2fac6b.png);
+  filter: opacity(0.3);
+  animation: filmRoll 4s linear infinite;
+}
+@keyframes filmRoll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.projects .rainOrShine:hover::before {
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/rain.67c8051b.png);
+  filter: opacity(0.6);
+  animation: rainAnimation 0.45s linear infinite;
+}
+@keyframes rainAnimation {
+  0% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 
 .codeLinks {
   display: flex;
@@ -443,7 +521,7 @@ header .socialMedia ul img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35%;
+  width: 37.5%;
 }
 .codeLinks a:hover,
 .codeLinks a:focus {
@@ -452,14 +530,27 @@ header .socialMedia ul img {
 }
 .codeLinks img {
   margin-right: 2%;
+  padding: 2%;
   width: 2.5rem;
   height: 2.5rem;
+}
+.codeLinks img:hover {
+  animation: spin 2s infinite;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .portfolioLink {
   display: flex;
   position: relative;
-  width: 17%;
+  width: 18%;
 }
 .portfolioLink a:hover::after {
   content: "";
