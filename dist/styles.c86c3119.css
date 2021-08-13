@@ -292,12 +292,20 @@ a {
 }
 
 h2 {
-  font-size: 3.9rem;
+  font-size: clamp(2.4rem, 1.9408rem + 1.5306vw, 3.9rem);
 }
 
 h3,
 p {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 1.2776rem + 0.4082vw, 1.8rem);
+}
+
+.portfolioProjects h3 {
+  font-size: clamp(2rem, 2.0612rem + -0.2041vw, 1.8rem);
+}
+
+.skipLink p {
+  margin: 0;
 }
 
 .dropdownContent a {
@@ -310,10 +318,6 @@ nav {
 
 .mainHeading h3 {
   color: #646464;
-}
-
-.about h3 {
-  font-size: 3.1rem;
 }
 
 .projects h3 {
@@ -388,12 +392,19 @@ button:hover {
 
 /* Dropdown Menu for Mobile */
 .dropdown {
-  position: absolute;
-  right: 0;
-  top: 2rem;
+  position: fixed;
+  right: clamp(3rem, -0.5000rem + 11.6667vw, 10rem);
+  top: clamp(3.4rem, -0.6500rem + 13.5000vw, 11.5rem);
+}
+
+.dropdown.homePage {
+  position: fixed;
+  right: 3rem;
+  top: clamp(3.4rem, -0.6500rem + 13.5000vw, 11.5rem);
 }
 
 .dropButton {
+  opacity: 0.8;
   position: relative;
   height: 3.3rem;
   border-top: 3px solid #323232;
@@ -406,6 +417,7 @@ button:hover {
 .dropdownContent {
   display: none;
   position: absolute;
+  background-color: whitesmoke;
   z-index: 1;
   padding-top: 1%;
   line-height: 3rem;
@@ -448,11 +460,6 @@ footer {
   justify-content: center;
   padding-bottom: 2%;
 }
-footer img {
-  width: 20%;
-  box-shadow: 0 10px 50px 5px black;
-  margin-bottom: 5%;
-}
 
 @media screen and (min-width: 901px) {
   .dropdown {
@@ -479,6 +486,19 @@ footer img {
 }
 header {
   padding-top: 5%;
+  position: relative;
+}
+header .skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 2rem;
+  z-index: 999;
+  color: #323232;
+  border: 0.4rem solid #323232;
+  padding: 0.5rem 1rem;
+}
+header .skipLink:focus {
+  left: 0;
 }
 header h1 {
   margin-bottom: 0;
@@ -503,7 +523,7 @@ header .personalInfo {
   padding-bottom: 0;
 }
 header .personalInfo ul {
-  width: 55%;
+  width: clamp(44.55rem, 31.2521rem + 24.1781vw, 62.2rem);
 }
 header .socialMedia ul {
   width: max(12%, 10rem);
@@ -523,6 +543,21 @@ header .socialMedia ul img {
 .about {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.about .headshot {
+  display: flex;
+  justify-content: center;
+}
+.about .bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(19.4rem, 9.4694rem + 33.102vw, 51.84rem);
+}
+.about img {
+  width: 50%;
+  box-shadow: 0 10px 50px 5px #323232;
 }
 
 .coreCompetencies li {
@@ -563,6 +598,10 @@ header .socialMedia ul img {
 .projects p,
 .portfolioProjects p {
   margin-bottom: 7.5%;
+}
+.projects .card,
+.portfolioProjects .card {
+  width: clamp(21.87rem, 19.0445rem + 9.4184vw, 31.1rem);
 }
 .projects .stockOMeter,
 .projects .quickFlickPix,
@@ -643,7 +682,7 @@ header .socialMedia ul img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 37.5%;
+  width: clamp(10.26rem, 9.7228rem + 1.7908vw, 12.015rem);
 }
 .codeLinks a:hover,
 .codeLinks a:focus {
@@ -672,11 +711,10 @@ header .socialMedia ul img {
 .portfolioLink {
   display: flex;
   position: relative;
-  width: max(19%, 20rem);
 }
 .portfolioLink a:hover::after {
   content: "";
-  width: 95%;
+  width: 18.525rem;
   height: 0.25rem;
   background: #323232;
   position: absolute;
@@ -690,6 +728,7 @@ header .socialMedia ul img {
 .returnToTop a {
   padding: 1%;
   border: 2px solid #323232;
+  box-shadow: 0 1px 80px 5px #323232;
 }
 .returnToTop a:hover,
 .returnToTop a:focus {
@@ -697,9 +736,71 @@ header .socialMedia ul img {
   color: white;
 }
 
+@media screen and (min-width: 901px) {
+  .dropdown main {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .dropdown main {
+    display: inline-block;
+  }
+
+  .navContainer main ul {
+    display: none;
+  }
+}
 @media screen and (max-width: 850px) {
   .mainHeading {
-    padding-top: 7.5%;
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .coreCompetencies {
+    text-align: center;
+  }
+  .coreCompetencies ul {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects h2, .portfolioProjects h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolioLink {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 549px) {
+  .personalInfo {
+    display: flex;
+    text-align: center;
+  }
+  .personalInfo ul {
+    flex-direction: column;
+  }
+
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about img {
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .skipLink {
+    display: none;
   }
 }
 .portfolioHeading {
@@ -808,14 +909,6 @@ header .socialMedia ul img {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.workExperienceContainer {
-  display: flex;
-  flex-wrap: wrap;
-}
-.workExperienceContainer .card {
-  margin-right: 10%;
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */
