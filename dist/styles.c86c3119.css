@@ -523,9 +523,6 @@ header .skipLink {
 header .skipLink:focus {
   left: 0;
 }
-header h1 {
-  margin-bottom: 0;
-}
 header nav {
   float: right;
   width: max(35%, 35rem);
@@ -568,8 +565,11 @@ header .mainHeading {
 }
 
 .coreCompetencies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   position: relative;
-  padding-bottom: 5%;
 }
 .coreCompetencies li {
   display: flex;
@@ -599,16 +599,20 @@ header .mainHeading {
 .card {
   display: flex;
   flex-direction: column;
-  width: max(30%, 20rem);
+  height: 35rem;
+  position: relative;
 }
 
 .projects {
-  padding-bottom: 30%;
+  padding: 2.5% 0;
 }
 
-.projects .container,
-.portfolioProjects .container {
-  margin-bottom: 1%;
+.projects,
+.portfolioProjects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 .projects p,
 .portfolioProjects p {
@@ -688,10 +692,16 @@ header .mainHeading {
   }
 }
 
+.portfolioProjects {
+  height: 100vh;
+}
+
 .codeLinks {
   display: flex;
   justify-content: space-around;
-  position: relative;
+  position: absolute;
+  bottom: 10%;
+  width: clamp(20rem, 16.9388rem + 10.2041vw, 30rem);
 }
 .codeLinks a {
   display: flex;
@@ -736,24 +746,32 @@ header .mainHeading {
   bottom: 20%;
 }
 
-.personalInfo {
-  padding-bottom: 0;
+.personalInfo .personalInfoContainer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
 }
 .personalInfo ul {
+  width: 70%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
-.personalInfo li {
+.personalInfo .socialMedia {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.personalInfo li,
+.personalInfo a {
   display: flex;
   align-items: center;
 }
-.personalInfo a,
 .personalInfo img {
   width: 2.5rem;
 }
 .personalInfo p {
-  width: fit-content;
-  margin-left: 3%;
+  margin-left: 5%;
 }
 .personalInfo img:hover {
   animation: spin 2s infinite;
@@ -768,30 +786,10 @@ header .mainHeading {
   }
 }
 
-.socialMedia {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 2.5%;
-}
-.socialMedia ul {
-  width: max(12%, 10rem);
-}
-.socialMedia ul a {
-  width: max(3%, 3rem);
-}
-.socialMedia ul a:hover,
-.socialMedia ul a:focus {
-  outline: 2px solid #323232;
-  border-radius: 2.5%;
-}
-.socialMedia ul img {
-  width: max(3%, 30px);
-}
-
 .returnToTop {
   display: flex;
   justify-content: center;
-  padding-bottom: 5%;
+  padding-bottom: 2.5%;
 }
 .returnToTop a {
   padding: 1%;
@@ -818,28 +816,13 @@ header .mainHeading {
     display: none;
   }
 }
-@media screen and (max-width: 850px) {
-  .mainHeading {
-    padding-top: 5rem;
-  }
-}
-@media screen and (min-width: 651px) {
-  .coreCompetencies .nextSection {
-    display: none;
-  }
-}
 @media screen and (max-width: 650px) {
   .coreCompetencies {
     text-align: center;
-    height: 100vh;
-    padding-bottom: 0;
   }
   .coreCompetencies ul {
     flex-direction: column;
     align-content: center;
-  }
-  .coreCompetencies .nextSection {
-    display: flex;
   }
 
   .coreCompetencies h2,
@@ -868,16 +851,9 @@ header .mainHeading {
     justify-content: center;
   }
 
-  .personalInfo {
-    display: flex;
-    justify-content: center;
-  }
   .personalInfo ul {
     flex-direction: column;
-  }
-
-  .socialMedia ul {
-    justify-content: space-between;
+    width: 100%;
   }
 
   .socialMedia,
@@ -895,6 +871,9 @@ header .mainHeading {
   .personalInfo ul {
     flex-direction: column;
   }
+  .personalInfo li {
+    padding-bottom: 2.5%;
+  }
 
   .socialMedia {
     display: flex;
@@ -904,6 +883,13 @@ header .mainHeading {
 @media screen and (max-width: 450px) {
   .skipLink {
     display: none;
+  }
+
+  .card h4 {
+    margin: 1.5% 0;
+  }
+  .card p {
+    margin-bottom: 15%;
   }
 }
 .portfolioHeading {
