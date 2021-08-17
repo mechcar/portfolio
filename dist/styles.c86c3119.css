@@ -365,20 +365,20 @@ body {
   justify-content: center;
   width: 100%;
   position: absolute;
-  bottom: 5%;
+  bottom: 2.5%;
 }
 .nextSection img {
   width: clamp(2rem, 1.3878rem + 2.0408vw, 4rem);
 }
 .nextSection img:hover {
-  animation: slide 1.5s infinite;
+  animation: slide 1s infinite;
 }
 @keyframes slide {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(100%);
+    transform: translateY(25%);
   }
 }
 
@@ -501,10 +501,6 @@ footer {
   nav {
     margin-top: 2%;
   }
-
-  .card {
-    padding-bottom: 10%;
-  }
 }
 header {
   padding-top: 5%;
@@ -573,17 +569,17 @@ header .mainHeading {
 }
 .coreCompetencies li {
   display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   flex-wrap: wrap;
-  width: max(10%, 10rem);
+  width: clamp(8.5rem, 8.0408rem + 1.5306vw, 10rem);
 }
 .coreCompetencies ul img {
   display: flex;
-  width: 30px;
+  width: 3rem;
 }
-.coreCompetencies img:hover {
+.coreCompetencies ul img:hover {
   animation: spin 2s infinite;
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -594,13 +590,6 @@ header .mainHeading {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  height: 35rem;
-  position: relative;
 }
 
 .projects {
@@ -614,13 +603,17 @@ header .mainHeading {
   flex-direction: column;
   align-content: center;
 }
-.projects p,
-.portfolioProjects p {
-  margin-bottom: 7.5%;
+.projects .container,
+.portfolioProjects .container {
+  padding-bottom: 2.5%;
 }
 .projects .card,
 .portfolioProjects .card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: clamp(21.87rem, 19.0445rem + 9.4184vw, 31.1rem);
+  height: clamp(25rem, 23.4694rem + 5.102vw, 30rem);
 }
 .projects .stockOMeter,
 .projects .quickFlickPix,
@@ -700,14 +693,17 @@ header .mainHeading {
   display: flex;
   justify-content: space-around;
   position: absolute;
-  bottom: 10%;
+  bottom: 0;
   width: clamp(20rem, 16.9388rem + 10.2041vw, 30rem);
+}
+.codeLinks p {
+  margin: 0;
+  width: clamp(8rem, 7.3878rem + 2.0408vw, 10rem);
 }
 .codeLinks a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(10.26rem, 9.7228rem + 1.7908vw, 12.015rem);
 }
 .codeLinks a:hover,
 .codeLinks a:focus {
@@ -817,19 +813,6 @@ header .mainHeading {
   }
 }
 @media screen and (max-width: 650px) {
-  .coreCompetencies {
-    text-align: center;
-  }
-  .coreCompetencies ul {
-    flex-direction: column;
-    align-content: center;
-  }
-
-  .coreCompetencies h2,
-.projects h2 {
-    padding-top: 30%;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -885,11 +868,11 @@ header .mainHeading {
     display: none;
   }
 
+  .card {
+    margin-bottom: 2rem;
+  }
   .card h4 {
     margin: 1.5% 0;
-  }
-  .card p {
-    margin-bottom: 15%;
   }
 }
 .portfolioHeading {
