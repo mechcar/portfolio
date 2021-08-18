@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Josh Carson - Portfolio</title>
+		<link rel="shortcut icon" type="image/jpg" href="/CNTowerFavicon.e259b626.ico">
 		<link rel="stylesheet" href="/styles.c86c3119.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -13,7 +14,7 @@
 	<script src="/styles.c86c3119.js"></script></head>
 	<body>
 		<div class="wrapper">
-			<header>
+			<header class="portfolio wrapper">
 				<div class="wrapper">
 					<nav>
 						<div class="navContainer">
@@ -21,7 +22,7 @@
 								<a href="/" class="homeAnchor">
 									<li>Home</li>
 								</a>
-								<a href="">
+								<a href="/resume\joshCarsonCV.pdf">
 									<li>Resume</li>
 								</a>
 								<a href="https://josh-carson.com/contact">
@@ -29,13 +30,13 @@
 								</a>
 							</ul>
 
-							<div class="dropdown">
+							<div class="dropdown portfolioMenu">
 								<label for="dropButton" id="dropButton" name="dropButton"></label>
 								<button class="dropButton">Menu</button>
 
 								<div class="dropdownContent">
 									<a href="/">Home</a>
-									<a href="#">Resume</a>
+									<a href="/resume\joshCarsonCV.pdf">Resume</a>
 									<a href="https://josh-carson.com/contact">Contact</a>
 								</div>
 							</div>
@@ -46,7 +47,7 @@
 			</header>
 			<main>
 				<section class="portfolioProjects" id="portfolioProjects">
-					<div class="container">
+					<div class="container wrapper">
 						<div class="card">
 							<div class="stockOMeter">
 								<h3>StockOMeter</h3>
@@ -106,13 +107,14 @@
 							</div>
 						</div>
 						<div class="card">
-							<h3>Knowledge Hub</h3>
+							<div class="knowledgeHub">
+								<h3>Knowledge Hub</h3>
+							</div>
 							<h4>JavaScript, SCSS, RESTful APIs</h4>
 							<p>
 								Word search app that returns audio
-								pronounciation, definition, synonyms and a
-								related image of the queried term. Created as a
-								paired programming project at Juno College.
+								pronunciation, definition, synonyms and a
+								related image of the queried term.
 							</p>
 							<div class="codeLinks">
 								<a href="https://jcknowledgehub.netlify.app/">
@@ -126,10 +128,8 @@
 						</div>
 					</div>
 				</section>
-				<footer class="wrapper">
-					Josh Carson 2021
-				</footer>
 			</main>
 		</div>
+		<footer class="wrapper">Josh Carson 2021</footer>
 	</body>
 </html>
