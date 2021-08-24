@@ -310,7 +310,7 @@ p {
 
 .codeLinks p {
   margin: 0;
-  width: clamp(5rem, 3.4694rem + 5.1020vw, 10rem);
+  width: clamp(5rem, 3.4694rem + 5.102vw, 10rem);
 }
 
 .skipLink p {
@@ -355,7 +355,8 @@ h4 {
   color: #646464;
 }
 
-.contactForm a:hover, .contactForm a:focus {
+.contactForm a:hover,
+.contactForm a:focus {
   outline: 2px solid #323232;
 }
 
