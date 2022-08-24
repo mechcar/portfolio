@@ -338,6 +338,7 @@ footer {
 .tab-container {
   text-align: center;
   margin: 0 auto;
+  padding-top: 8rem;
 }
 
 .module-overview img {
@@ -470,7 +471,10 @@ footer {
 }
 
 nav {
-  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   display: flex;
   justify-content: center;
