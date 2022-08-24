@@ -4,260 +4,88 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Josh Carson</title>
-		<link rel="shortcut icon" type="image/jpg" href="/CNTowerFavicon.e259b626.ico">
-		<link rel="stylesheet" href="/styles.c86c3119.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-	<script src="/styles.c86c3119.js"></script></head>
+		<title>Josh Carson - Web Developer</title>
+		<link rel="stylesheet" href="/styles.5c8f3eab.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/styles.5c8f3eab.js"></script></head>
 	<body>
+		<nav>
+			<button data-toggle="overview" class="button tab-toggle selectedTab">
+				Overview
+			</button>
+			<button data-toggle="projects" class="button tab-toggle">
+				Projects
+			</button>
+		</nav>
 		<div class="wrapper">
-			<header class="home">
-				<a href="#about" class="skipLink">
-					<p>Skip to main content</p>
-				</a>
-				<div class="wrapper">
-					<nav>
-						<div class="navContainer wrapper">
-							<ul>
-								<a href="https://josh-carson.com/portfolio">
-									<li>Portfolio</li>
-								</a>
-								<a href="/resume\joshCarsonCV.pdf">
-									<li>Resume</li>
-								</a>
-								<a href="https://josh-carson.com/contact">
-									<li>Contact</li>
-								</a>
-							</ul>
+			<div class="module-overview tab-container center">
+				<h1>Josh Carson</h1>
+				<img src="/Profile.61110b64.jpg" alt="Josh Carson headshot.">
+				<p>
+					I am a front end web developer who approaches learning with
+					a hands-on approach. My experience in web development and in
+					the trades has led me to become a detail-oriented, creative
+					problem-solver. When I'm not working on a project, you'll
+					find me teaching my dog new tricks, cooking my favourite
+					dishes, playing old Gameboy games or training at the gym.
+				</p>
 
-							<div class="dropdown homePage">
-								<label for="dropButton" id="dropButton" name="dropButton"></label>
-								<button class="dropButton">Menu</button>
-
-								<div class="dropdownContent">
-									<a href="https://josh-carson.com/portfolio">Portfolio</a>
-									<a href="/resume\joshCarsonCV.pdf">Resume</a>
-									<a href="https://josh-carson.com/contact">Contact</a>
-								</div>
-							</div>
-						</div>
-					</nav>
+				<h3>Competencies</h3>
+				<div class="competencies">
+					<img src="/html-5.bf6e23e0.png" alt="HTML5 icon">
+					<img src="/css-3.7c707b23.png" alt="CSS3 icon">
+					<img src="/js.e48e9c74.png" alt="JS icon">
+					<img src="/github.c8eb901c.png" alt="Github icon">
+					<img src="/asana.b5863775.png" alt="Asana icon">
+					<img src="/jira.fe637a0b.png" alt="Jira icon">
+					<span>}</span>
 				</div>
-
-				<div class="mainHeading wrapper">
-					<h1>Hi. I'm Josh Carson</h1>
-					<h3>Front End Developer.</h3>
+			</div>
+			<div class="module-projects tab-container">
+				<div class="module-projects_container">
+					<section>
+						<a href="https://investor.breadfinancial.com/overview/default.aspx" target="_blank">
+							<h3>Bread Financial</h3>
+							<div class="site-preview bf"></div>
+						</a>
+					</section>
+					<section>
+						<a href="https://www.aboutcoupang.com/English/home/default.aspx" target="_blank">
+							<h3>Coupang</h3>
+							<div class="site-preview coupang"></div>
+						</a>
+					</section>
+					<section>
+						<a href="https://investorrelations.freshdelmonte.com/overview/default.aspx" target="_blank"><h3>Delmonte</h3>
+							<div class="site-preview delmonte"></div>
+						</a>
+					</section>
+					<section>
+						<a href="https://ir.firstbusiness.bank/investor-relations/default.aspx" target="_blank"><h3>First Business Financial</h3>
+							<div class="site-preview fbf"></div>
+						</a>
+					</section>
+					<section>
+						<a href="https://investor.jbhunt.com/overview/default.aspx" target="_blank"><h3>J.B. Hunt</h3>
+							<div class="site-preview jb-hunt"></div>
+						</a>
+					</section>
+					<section>
+						<a href="https://ir.quantumscape.com/home/default.aspx" target="_blank"><h3>QuantumScape</h3>
+							<div class="site-preview qs"></div>
+						</a>
+					</section>
 				</div>
-
-				<a href="#about" class="nextSection"><img src="/arrowDown.59791130.png" alt="arrow down icon in black & white"></a>
-			</header>
-			<main>
-				<section class="about wrapper" id="about">
-					<div class="headshot">
-						<img src="/Riggy.fdf1223d.jpeg" alt="Josh holding his dog, Riggy">
-					</div>
-					<div class="bio">
-						<h2>About me</h2>
-						<p>
-							I am a Front End Developer who approaches learning
-							with a hands-on first approach. My time in the
-							trades has forced me to become a detail-oriented,
-							creative problem-solver. When I’m not programming,
-							you’ll find me training (or hugging) my dog, cooking
-							new dishes or playing old GameBoy games on an
-							emulator.
-						</p>
-					</div>
-					<a href="#coreCompetencies" class="nextSection"><img src="/arrowDown.59791130.png" alt="arrow down icon in black & white"></a>
-				</section>
-
-				<section class="coreCompetencies wrapper" id="coreCompetencies">
-					<h2>Core Competencies</h2>
-					<ul>
-						<li>
-							<img src="/HTML.2d1ee2cb.jpg" alt="HTML Logo in black & white">
-							<h3>HTML5</h3>
-						</li>
-
-						<li>
-							<img src="/CSS.80ecddc2.png" alt="CSS Logo in black & white">
-							<h3>CSS3</h3>
-						</li>
-
-						<li>
-							<img src="/sass.43716b18.png" alt="SASS Logo in black & white">
-							<h3>SASS</h3>
-						</li>
-
-						<li>
-							<img src="/JS.442aa99a.png" alt="JavaScript Logo in black & white">
-							<h3>JavaScript</h3>
-						</li>
-
-						<li>
-							<img src="/jQuery.89ac5a34.png" alt="jQuery Logo in black & white">
-							<h3>jQuery</h3>
-						</li>
-
-						<li>
-							<img src="/React.6b2fe823.png" alt="React Logo in black & white">
-							<h3>React</h3>
-						</li>
-						<li>
-							<img src="/api.af5b7d20.png" alt="API logo in black & white">
-							<h3>RESTful APIs</h3>
-						</li>
-						<li>
-							<img src="/GitHub.cecae969.png" alt="GitHub Logo in black & white">
-							<h3>GitHub</h3>
-						</li>
-						<li>
-							<img src="/firebase.a0615aed.png" alt="Firebase logo in black & white">
-							<h3>Firebase</h3>
-						</li>
-						<li>
-							<img src="/parcel.fd0d65c7.png" alt="Parcel Logo in black & white">
-							<h3>Parcel</h3>
-						</li>
-						<li>
-							<img src="/accessibility.5837956f.png" alt="Accessibility icon in black & white">
-							<h3>Accessibility</h3>
-						</li>
-						<li>
-							<img src="/responsiveness.46e0a785.png" alt="Responsiveness icon in black & white">
-							<h3>Responsiveness</h3>
-						</li>
-					</ul>
-					<h2>Critical Skills</h2>
-					<ul>
-						<li>
-							<img src="/communication.05fb5878.png" alt="communication icon in black & white">
-							<h3>Communication</h3>
-						</li>
-						<li>
-							<img src="/problemSolving.2c59c137.png" alt="problem solving icon in black & white">
-							<h3>Problem Solving</h3>
-						</li>
-						<li>
-							<img src="/detailOriented.e91f3590.png" alt="detail-oriented icon in black & white">
-							<h3>Detail Oriented</h3>
-						</li>
-						<li>
-							<img src="/quickLearner.ed38bd16.png" alt="quick learner icon in black & white">
-							<h3>Quick Learner</h3>
-						</li>
-						<li>
-							<img src="/organized.8e90a484.png" alt="organized icon in black & white">
-							<h3>Highly Organized</h3>
-						</li>
-					</ul>
-					<a href="#projects" class="nextSection"><img src="/arrowDown.59791130.png" alt="arrow down icon in black & white"></a>
-				</section>
-
-				<section class="projects wrapper" id="projects">
-					<h2>Projects</h2>
-					<div class="container">
-						<div class="card">
-							<div class="stockOMeter">
-								<h3>StockOMeter</h3>
-							</div>
-							<h4>JavaScript, SCSS, RESTful API</h4>
-							<p>
-								An app to keep track of your investments and
-								search for stock information and ticker charts.
-							</p>
-							<div class="codeLinks">
-								<a href="https://stockometer.netlify.app/">
-									<img src="/Link.be5203e5.png" alt="Cartoon chain link">
-									<p>View Live</p></a>
-								<a href="https://github.com/mechcar/StockOMeter">
-									<img src="/GitHub.cecae969.png" alt="GitHub Logo in black & white">
-									<p>View Repo</p></a>
-							</div>
-						</div>
-						<div class="card">
-							<div class="quickFlickPix">
-								<h3>QuickFlickPix</h3>
-							</div>
-							<h4>React, SCSS, Firebase, RESTful API</h4>
-							<p>
-								Users can search for and add movies to curated
-								lists, and receive recommendations based on
-								desired genre and time available for viewing.
-							</p>
-							<div class="codeLinks">
-								<a href="https://quickflickpix.netlify.app/">
-									<img src="/Link.be5203e5.png" alt="Cartoon chain link">
-									<p>View Live</p></a>
-								<a href="https://github.com/cohort35-project4-group5/quick-flick-picker"><img src="/GitHub.cecae969.png" alt="GitHub Logo in black & white">
-									<p>View Repo</p>
-								</a>
-							</div>
-						</div>
-						<div class="card">
-							<div class="rainOrShine">
-								<h3>Rain or Shine?</h3>
-							</div>
-							<h4>React, CSS, RESTful API</h4>
-							<p>
-								Weather app with simple UI that can return the
-								forecast based on city name, postal code or zip
-								code.
-							</p>
-							<div class="codeLinks">
-								<a href="https://rainorshineapp.netlify.app/">
-									<img src="/Link.be5203e5.png" alt="Cartoon chain link">
-									<p>View Live</p>
-								</a>
-								<a href="https://github.com/mechcar/rainOrShine">
-									<img src="/GitHub.cecae969.png" alt="GitHub Logo in black & white">
-									<p>View Repo</p></a>
-							</div>
-						</div>
-					</div>
-					<div class="portfolioLink">
-						<a href="https://josh-carson.com/portfolio"><h3>View Full Portfolio</h3></a>
-					</div>
-				</section>
-				<section class="personalInfo wrapper" id="personalInfo">
-					<div class="personalInfoContainer">
-						<ul>
-							<li>
-								<a href="mailto:joshetcarson@gmail.com">
-									<img src="/email.5c30934f.png" alt="email icon in black & white">
-								</a>
-								<p>joshetcarson@gmail.com</p>
-							</li>
-
-							<li>
-								<img src="/phone.bb1c22ed.png" alt="phone icon in black & white">
-								<p>416-525-4866</p>
-							</li>
-							<div class="socialMedia">
-								<a href="https://www.linkedin.com/in/josh-carson-197338a4/">
-									<li>
-										<img src="/linkedIn.0298dc6e.png" alt="LinkedIn Logo in black & white">
-									</li>
-								</a>
-								<a href="https://github.com/mechcar">
-									<li>
-										<img src="/GitHub.cecae969.png" alt="GitHub Logo in black & white">
-									</li>
-								</a>
-							</div>
-						</ul>
-					</div>
-				</section>
-
-				<section class="returnToTop wrapper">
-					<a href="/">Return to top</a>
-				</section>
-			</main>
-			<footer class="wrapper">Josh Carson 2021</footer>
+			</div>
+			<footer>
+				<div class="module-contact">
+					<h3>Contact Me</h3>
+					<a href="mailto:joshetcarson@gmail.com" target="_blank">Email</a>
+					<a href="https://www.linkedin.com/in/joshcarsondev" target="_blank">LinkedIn</a>
+					<a href="/assets\JoshCarsonCV.pdf" target="_blank">CV</a>
+				</div>
+			</footer>
 		</div>
-		<script src="/app.c328ef1a.js"></script>
 	</body>
+	<script src="/tabs.2551e56f.js"></script>
 </html>

@@ -12,11 +12,7 @@
 	},
 	"scripts": {
 		"main": "parcel src/index.html",
-		"mainBuild": "parcel build src/index.html",
-		"portfolio": "parcel src/portfolio.html",
-		"portfolioBuild": "parcel build src/portfolio.html",
-		"contact": "parcel src/contact.html",
-		"contactBuild": "parcel build src/contact.html"
+		"mainBuild": "parcel build src/index.html"
 	},
 	"author": "JC",
 	"license": "ISC"
