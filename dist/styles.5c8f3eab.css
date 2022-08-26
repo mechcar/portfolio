@@ -381,7 +381,7 @@ footer {
 }
 .module-projects_container section {
   margin-bottom: 3rem;
-  width: calc(50% - 3rem);
+  width: 48%;
 }
 .module-projects_container section .site-preview {
   height: clamp(12rem, 2.2785rem + 12.6582vw, 20rem);
