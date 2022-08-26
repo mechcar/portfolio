@@ -377,13 +377,11 @@ footer {
 .module-projects_container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .module-projects_container section {
   margin-bottom: 3rem;
   width: calc(50% - 3rem);
-}
-.module-projects_container section:nth-of-type(odd) {
-  margin-right: 3rem;
 }
 .module-projects_container section .site-preview {
   height: clamp(12rem, 2.2785rem + 12.6582vw, 20rem);
@@ -473,9 +471,6 @@ footer {
 @media only screen and (max-width: 48em) {
   .module-projects_container section {
     width: 100%;
-  }
-  .module-projects_container section:nth-of-type(odd) {
-    margin-right: 0;
   }
 }
 .module-contact {
