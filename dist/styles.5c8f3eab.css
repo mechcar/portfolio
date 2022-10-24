@@ -378,6 +378,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 3rem;
 }
 .module-projects_container section {
   margin-bottom: 3rem;
@@ -406,6 +407,10 @@ footer {
   background: url("/fbf.5393fc54.png") top center no-repeat;
   background-size: 100%;
 }
+.module-projects_container section .site-preview.fh {
+  background: url("/fh.65d18fa7.jpg") top center no-repeat;
+  background-size: 100%;
+}
 .module-projects_container section .site-preview.forge {
   background: url("/forge.f2398e44.png") top center no-repeat;
   background-size: 100%;
@@ -430,6 +435,7 @@ footer {
 @media only screen and (max-width: 30em) {
   .module-projects_container section .site-preview {
     height: clamp(20rem, -6.9231rem + 76.9231vw, 30rem);
+    margin-bottom: 1rem;
   }
   .module-projects_container section .site-preview.bf {
     background: url("/bread-financial_mobile.cf7ba39a.png") top center no-repeat;
@@ -450,6 +456,10 @@ footer {
   .module-projects_container section .site-preview.fbf {
     background: url("/fbf_mobile.cf2515c7.png") top center no-repeat;
     background-size: contain;
+  }
+  .module-projects_container section .site-preview.fh {
+    background: url("/fh_mobile.05a4e133.jpg") center center no-repeat;
+    background-size: 100%;
   }
   .module-projects_container section .site-preview.forge {
     background: url("/forge_mobile.7431d044.png") top center no-repeat;
